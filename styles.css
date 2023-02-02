@@ -1,0 +1,231 @@
+body {
+    background-color: antiquewhite;
+}
+
+.banner {
+    background-image: url("banner.png");
+    background-size: contain;
+    content-visibility: hidden;
+    height: 120px;
+    font-size: 54pt;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    background: white;
+    height: 80px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.menu {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: burlywood;
+    border: 1px solid burlywood;
+}
+
+a:visited {
+    color: peru;
+    font-size: 12pt;
+    font-variant: small-caps;
+}
+
+.logo {
+    float: left;
+}
+
+ul {
+    list-style: none;
+}
+h1 {
+    clear: both;
+}
+
+.menu li a {
+    display: block;
+    color: peru;
+    height: 100%;
+    text-align: center;
+    background-color: snow;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.topic {
+    background-color: antiquewhite;
+}
+
+.main_content {
+    float: left;
+    width: 60%;
+    margin-right: 5%;
+}
+img[src="nature.jpeg"] {
+    float: left;
+    margin-right: 20px;
+}
+
+#requirements {
+    clear: both;
+}
+#requirements p {
+    font-family: "Bookman Old Style";
+}
+
+#requirements ul {
+    background: #ff7700;
+}
+
+#submission {
+    clear: both;
+}
+#submission img[src="planets.jpeg"] {
+    width: 240px;
+    height: 320px;
+    cursor: pointer;
+    float: left;
+}
+
+#submission ul {
+    cursor: pointer;
+    padding: 0;
+    font-size: 30px;
+    clear: both;
+}
+#submission ul li:hover + #submission img[src="planets.jpeg"] {
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    width:480px;
+    height: 640px;
+    cursor: pointer;
+}
+#grading {
+    clear: both;
+}
+#grading table {
+    width: 100%;
+    gap: 10px;
+}
+#grading table tr:first-child {
+    background: azure;
+}
+#grading table td {
+    text-align: center;
+    border-radius: 5px;
+    border: darksalmon solid 1px;
+    cursor: pointer;
+}
+#grading table td:hover {
+    text-align: center;
+    border-radius: 5px;
+    background: darksalmon;
+    cursor: pointer;
+}
+
+#grading table tr:hover {
+    border-radius: 5px;
+    background: #eec9be;
+}
+aside {
+    float: right;
+    width: 35%;
+}
+
+aside p {
+    font-size: 20px;
+    font-family: SansSerif;
+}
+
+#deadline {
+    padding: 10px;
+    border: black solid;
+    border-radius: 5px;
+}
+#deadline h4 {
+    color: red;
+}
+#deadline ul {
+    color: red;
+}
+
+footer {
+    width: 100%;
+    padding-top: 10px;
+    background: #8b00001a;
+    clear: both;
+    display: flex;
+    justify-content: space-evenly;
+}
+footer a {
+    color: #a00000e6;
+    font-family: "Bookman Old Style";
+}
+.contacts {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    color: #ff7700;
+}
+
+.categories ul {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.quick_links ul {
+    width: 200px;
+    padding: 0;
+}
+
+.quick_links li {
+    margin-bottom: 20px;
+}
+.categories li, .quick_links li {
+    border-radius: 5px;
+    text-align: center;
+    background: darksalmon;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    color: lightsalmon;
+    border-radius: 5px;
+    border-bottom: lightsalmon solid 1px;
+    font-family: "Segoe MDL2 Assets";
+    font-size: 2em;
+}
+h3 {
+    color: white;
+    text-align: center;
+    background: black;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: lightsalmon solid 1px;
+}
+
+h4 {
+    color: #ffcd00;
+    text-align: center;
+    border-bottom: #ffcd00 solid 0.5px;
+}
+h5 {
+    color: white;
+    font-family: "Bookman Old Style";
+    border-bottom: #ff7700 solid;
+    text-align: center;
+}
+
