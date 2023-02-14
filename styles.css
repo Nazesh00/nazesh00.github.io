@@ -14,7 +14,6 @@ nav {
     display: flex;
     flex-direction: row;
     background: white;
-    height: 80px;
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -39,11 +38,16 @@ a:visited {
 }
 
 .logo {
+    display: flex;
     float: left;
+    justify-content: space-evenly;
+    overflow: hidden;
+    width: 100%;
 }
 
 ul {
     list-style: none;
+    padding: 0 40px;
 }
 h1 {
     clear: both;
@@ -100,14 +104,7 @@ img[src="nature.jpeg"] {
     font-size: 30px;
     clear: both;
 }
-#submission ul li:hover + #submission img[src="planets.jpeg"] {
-    margin: auto;
-    position: absolute;
-    left: 50%;
-    width:480px;
-    height: 640px;
-    cursor: pointer;
-}
+
 #grading {
     clear: both;
 }
@@ -183,7 +180,7 @@ footer a {
     gap: 20px;
 }
 .quick_links ul {
-    width: 200px;
+    width: 100%;
     padding: 0;
 }
 
@@ -228,4 +225,76 @@ h5 {
     border-bottom: #ff7700 solid;
     text-align: center;
 }
+
+@media (min-width: 367px) and (max-width: 1023px) {
+    body {
+        text-align: center!important;
+    }
+    nav {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .menu {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .main_content {
+        display: grid;
+        grid-template-columns: 1fr;
+        font-size: 1.5rem;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .main_content li {
+        margin: 10px 0;
+        border-radius: 5px;
+        border: black solid 1px;
+    }
+    #task img {
+        width: 100%;
+        height: auto;
+    }
+
+    #submission img {
+        width: 100% !important;
+        height: auto!important;
+    }
+
+    aside {
+        display: grid;
+        grid-template-columns: 1fr;
+        font-size: 1.5rem!important;
+        width: 100%;
+    }
+    footer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 2em;
+    }
+    .contacts {
+        display: flex;
+        flex-direction: column;
+    }
+    .map, .map iframe {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    p {
+        /*font-size: 1.5em!important;*/
+    }
+
+    h1,h2,h3,h4,h5 {
+        font-size: 1.5em!important;
+    }
+}
+
+
+
+
 
