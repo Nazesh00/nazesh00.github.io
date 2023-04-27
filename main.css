@@ -88,8 +88,8 @@ header a {
 
 .logo {
     border-radius: 50%;
+    transition: rotate 200ms ease;
 }
-
 .content {
     display: flex;
     flex-direction: row;
@@ -280,7 +280,7 @@ footer {
     width: 40px;
     height: 40px;
 }
-@media (max-width: 1100px) {
+@media (max-width: 900px) {
     header {
         padding: 0 40px;
     }
@@ -368,6 +368,9 @@ footer {
         flex-direction: column;
         gap: 10px;
     }
+    .contacts {
+        font-size: 1rem;
+    }
 }
 
 h1 {
@@ -413,4 +416,7 @@ h3 {
     translate: -50% -50%;
     background: #00ffc4;
     border-radius: 50%;
+}
+.Certificates, .Language, .Skill {
+    cursor: cell;
 }

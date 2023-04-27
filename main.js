@@ -1,69 +1,4 @@
-
-
 $(document).ready(function (){
-    // let prevPos = 0
-    // let curpos = 0
-    // let posYprev = $('#clock').width()/2
-    // let posXprev = $('#clock').width()/2
-    // $('#clock').bind('mousemove',function (e) {
-    //     prevPos = curpos
-    //     const maxS = $('#clock').width()
-    //     var parentOffset = $(this).parent().offset();
-    //     var relX = e.pageX - parentOffset.left;
-    //     var relY = e.pageY - parentOffset.top;
-    //     let ya = 0
-    //     let xa = 0
-    //
-    //
-    //     if (relY > maxS || relY < 0) {
-    //         relY = posYprev
-    //     }
-    //     if (relX > maxS || relX < 0) {
-    //         relX = posXprev
-    //     }
-    //     posYprev = relY
-    //     posXprev = relX
-    //
-    //     let xd = 0
-    //     let yd = 0
-    //     if (relY <= maxS/2) {
-    //         yd = maxS/2 -relY
-    //     } else  {
-    //         yd = -(maxS/2 + relY - maxS)
-    //     }
-    //     if (relX <= maxS/2) {
-    //         xd = -(maxS/2 - relX)
-    //     } else  {
-    //         xd = relX - maxS/2
-    //     }
-    //     xd = -xd
-    //     let deg  = Math.atan2(yd, xd)*180.0/Math.PI;
-    //
-    //     if (deg <= 90 && deg > 0) {
-    //         curpos = 0
-    //     }
-    //     if (deg <= 180 && deg > 90) {
-    //         curpos = 1
-    //     }
-    //     if (deg <= -90 && deg > -180) {
-    //         curpos = 2
-    //     }
-    //     if (deg <= 0 && deg > -90) {
-    //         curpos = 3
-    //     }
-    //     deg = 45 + 90*curpos
-    //     $('#round').css('rotate',deg + 'deg')
-    //     if (curpos > prevPos || (prevPos === 3 && curpos === 0)) {
-    //         console.log(curpos,prevPos,curpos > prevPos || (prevPos === 3 && curpos === 0))
-    //         var skill = $('.Skill').children().first();
-    //         $('.Skill').append(skill);
-    //     }
-    //     else if (curpos < prevPos || (prevPos === 0 && curpos === 3)) {
-    //         console.log(curpos,prevPos,curpos < prevPos || (prevPos === 0 && curpos === 3))
-    //         var skill = $('.Skill').children().last();
-    //         $('.Skill').prepend(skill);
-    //     }
-    // })
     $('.move-to-nav').click(function() {
         console.log($('.aside-links').children())
         for (let ch of $('.aside-links').children()) {
@@ -75,4 +10,59 @@ $(document).ready(function (){
         $('#section').css('width','100%')
     });
 
+    $('.Skill').on('wheel',function (e){
+        e.preventDefault()
+        var deltaY = e.originalEvent.deltaY
+        if (deltaY > 0) {
+            var skill = $('.Skill').children().first();
+            $('.Skill').append(skill);
+        } else {
+            var skill = $('.Skill').children().last();
+            $('.Skill').prepend(skill);
+        }
+    })
+    $('.Language').on('wheel',function (e){
+        e.preventDefault()
+        var deltaY = e.originalEvent.deltaY
+        if (deltaY > 0) {
+            var lang = $('.Language').children().first();
+            $('.Language').append(lang);
+        } else {
+            var lang = $('.Language').children().last();
+            $('.Language').prepend(lang);
+        }
+    })
+    $('.Certificates').on('wheel',function (e){
+        e.preventDefault()
+        var deltaY = e.originalEvent.deltaY
+        if (deltaY > 0) {
+            var skill = $('.Certificates').children().first();
+            $('.Certificates').append(skill);
+        } else {
+            var skill = $('.Certificates').children().last();
+            $('.Certificates').prepend(skill);
+        }
+    })
+    $(window).on('scroll', function() {
+        var scrollTop = $(window).scrollTop();
+
+        if (scrollTop > $('#Experience').offset().top -400 && scrollTop < $('#Experience').offset().top + 400) {
+            $('#Experience').children().first().css('color','#D4D4D4FF')
+            setTimeout(function () {
+                $('#Experience').children().first().css('color','white')
+            },200)
+        }
+        if (scrollTop > $('#Education').offset().top -400 && scrollTop < $('#Education').offset().top + 400) {
+            $('#Education').children().first().css('color','#D4D4D4FF')
+            setTimeout(function () {
+                $('#Education').children().first().css('color','white')
+            },200)
+        }
+        if (scrollTop > $('#Research').offset().top -400 && scrollTop < $('#Research').offset().top + 400) {
+            $('#Research').children().first().css('color','#D4D4D4FF')
+            setTimeout(function () {
+                $('#Research').children().first().css('color','white')
+            },200)
+        }
+    })
 })
